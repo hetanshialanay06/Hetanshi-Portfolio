@@ -1,0 +1,81 @@
+/* ---------- THEME: butter yellow + sky blue + brown ---------- */
+:root {
+  --butter: #FFD84D;
+  --butter-light: #FFF6C4;
+  --sky: #4FC3F7;
+  --sky-light: #DDF3FF;
+  --brown: #5A3825;
+}
+html { scroll-behavior: smooth; }                /* smooth scrolling for links */
+body { background: linear-gradient(180deg, #FFF3B0 0%, #DDF3FF 100%) fixed; color: var(--brown); font-family: system-ui, sans-serif; }
+section, article, div[id] { scroll-margin-top: 70px; } /* navbar won't hide headings */
+a { color: var(--brown); }
+
+/* ---------- NAVBAR ---------- */
+.navbar-butter { background: var(--butter); box-shadow: 0 2px 8px rgba(90,56,37,.15); }
+.navbar-butter .nav-link { color: var(--brown); font-weight: 600; }
+.navbar-butter .nav-link:hover { color: #0277bd; }
+.logo { font-family: 'Pacifico', cursive; font-size: 1.7rem; color: var(--brown) !important; }
+
+/* ---------- CENTERED FEED COLUMN ---------- */
+.feed { max-width: 560px; margin: 0 auto; padding: 20px 12px; }
+.profile { padding: 8px 4px 0; }
+.section-title { font-size: 1.1rem; font-weight: 700; margin: 8px 0 12px; text-align: center; }
+
+/* ---------- STORY RING (gradient border around circles) ---------- */
+.ring { border-radius: 50%; padding: 3px; background: linear-gradient(45deg, var(--butter), var(--sky), #8B5A3C); display: inline-block; }
+.avatar { display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #fff; border: 3px solid #fff; font-weight: 700; color: var(--brown); width: 40px; height: 40px; }
+.ring.sm .avatar { width: 38px; height: 38px; }
+.ring.lg .avatar { width: clamp(70px, 22vw, 130px); height: clamp(70px, 22vw, 130px); font-size: 2.5rem; }
+.ring.lg { padding: 4px; }
+
+/* ---------- STORIES ROW ---------- */
+.stories { display: flex; justify-content: space-between; gap: 6px; margin: 18px 0; overflow-x: auto; }
+.story { background: none; border: none; color: var(--brown); font-size: .8rem; font-weight: 600; flex: 1; }
+.story .ring { display: block; width: 66px; margin: 0 auto 4px; }
+.story .avatar { width: 60px; height: 60px; font-size: 1.5rem; }
+
+/* ---------- POSTS ---------- */
+.post-card { background: #fff; border: none; border-radius: 14px; margin-bottom: 22px; overflow: hidden; box-shadow: 0 4px 14px rgba(90,56,37,.12); }
+.post-head { display: flex; align-items: center; gap: 10px; padding: 10px 14px; }
+.tile { margin: 0; padding: 22px; background: linear-gradient(135deg, var(--butter-light), var(--sky-light)); }
+.img-box { aspect-ratio: 1 / 1; background: linear-gradient(135deg, var(--butter), var(--sky)); display: flex; align-items: center; justify-content: center; font-weight: 700; text-align: center; padding: 10px; }
+.edu { background: rgba(255,255,255,.7); border-radius: 10px; padding: 10px 14px; margin-bottom: 10px; }
+.chip { display: inline-block; background: #fff; border: 2px solid var(--butter); border-radius: 20px; padding: 3px 14px; margin: 0 6px 6px 0; font-size: .9rem; }
+.tags { color: #0277bd; font-size: .9rem; }
+
+/* ---------- LIKE / COMMENT / SHARE ---------- */
+.actions { display: flex; gap: 4px; padding: 8px 10px 0; }
+.actions button { background: none; border: none; font-size: 1.5rem; color: var(--brown); padding: 2px 8px; }
+.actions .comment-btn { font-size: 1.3rem; }
+.heart { display: inline-block; transition: transform .15s; }
+.liked .heart { color: #e53935; transform: scale(1.25); }
+
+/* ---------- COMMENTS (added by script.js) ---------- */
+.comments { border-top: 1px solid #f1e3a0; padding: 10px 14px; background: #fffdf5; }
+.comment-list div { font-size: .9rem; margin-bottom: 4px; }
+
+/* ---------- BUTTONS ---------- */
+.btn-sky { background: var(--sky); border: none; color: var(--brown); font-weight: 700; }
+.btn-sky:hover { background: var(--butter); color: var(--brown); }
+.btn-outline-brown { border: 2px solid var(--brown); color: var(--brown); font-weight: 600; }
+.btn-outline-brown:hover { background: var(--brown); color: #fff; }
+
+/* ---------- CHAT BUBBLES ---------- */
+.chat { display: flex; flex-direction: column; gap: 6px; }
+.bubble { padding: 8px 14px; border-radius: 18px; max-width: 80%; }
+.you { background: var(--butter); align-self: flex-start; }
+.me { background: var(--sky); align-self: flex-end; }
+
+/* ---------- PROJECT POSTS (one image each) ---------- */
+.project-image { width: 100%; aspect-ratio: 4 / 3; overflow: hidden; background: linear-gradient(135deg, var(--butter), var(--sky)); }
+.project-image img { width: 100%; height: 100%; object-fit: cover; display: block; } /* fills the box without stretching */
+.project-title { font-size: 1.05rem; font-weight: 800; letter-spacing: .5px; margin-bottom: 0; }
+.project-sub { font-size: .85rem; color: #0277bd; margin-bottom: 6px; }
+.mood { font-style: italic; background: var(--butter-light); border-radius: 10px; padding: 8px 12px; display: inline-block; }
+.swatch { display: inline-block; width: 12px; height: 12px; border-radius: 50%; border: 1px solid #999; margin-right: 6px; }
+.modal-content { border-radius: 16px; color: var(--brown); }
+.modal-header, .modal-footer { background: var(--butter-light); border: none; }
+
+/* ---------- PROFILE PHOTO (fills the circle, no stretching) ---------- */
+.avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block; }
